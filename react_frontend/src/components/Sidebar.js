@@ -10,7 +10,7 @@ function Sidebar() {
     <aside className="sidebar" aria-label="Navigation">
       <nav className="nav-section">
         <div>Accueil</div>
-        <div>Trend</div>
+        {/* Removed 'Trend' option */}
         <div>Explorer</div>
         <div>Shorts</div>
         <div>Abonnements</div>
