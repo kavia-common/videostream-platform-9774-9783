@@ -1,0 +1,11 @@
+.feed-rows {
+  width: 100%;
+}
+.feed-row {
+  gap: 24px;
+}
+@media (max-width: 900px) {
+  .feed-row {
+    flex-direction: column;
+  }
+}

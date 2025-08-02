@@ -1,0 +1,10 @@
+/* Sidebar: most style from assets/design-system.css */
+.sidebar {
+  min-width: 220px;
+  border-right: 1px solid var(--color-f0f0f0);
+}
+.nav-section > div {
+  padding: 14px 22px;
+  font-size: 16px;
+  cursor: pointer;
+}

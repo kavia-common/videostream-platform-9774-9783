@@ -1,48 +1,33 @@
-import React, { useState, useEffect } from 'react';
-import logo from './logo.svg';
+import React from 'react';
+import MainLayout from './MainLayout';
+import VideoFeed from './components/VideoFeed';
+import VideoDetail from './components/VideoDetail';
+// import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'; // Uncomment if using react-router-dom
 import './App.css';
 
-// PUBLIC_INTERFACE
+/**
+ * Main front-end app entrypoint.
+ * Handles routing between main feed and video detail pages. For this version, simple toggle for demo.
+ */
 function App() {
-  const [theme, setTheme] = useState('light');
+  // Simple toggle for demo: feed or detail (replace with router in real app)
+  const [view, setView] = React.useState('feed');
 
-  // Effect to apply theme to document element
-  useEffect(() => {
-    document.documentElement.setAttribute('data-theme', theme);
-  }, [theme]);
-
-  // PUBLIC_INTERFACE
-  const toggleTheme = () => {
-    setTheme(prevTheme => prevTheme === 'light' ? 'dark' : 'light');
-  };
+  // Simulate page switch for demonstration.
+  function goToDetail() { setView('detail'); }
+  function goToFeed() { setView('feed'); }
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <button 
-          className="theme-toggle" 
-          onClick={toggleTheme}
-          aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
-        >
-          {theme === 'light' ? '🌙 Dark' : '☀️ Light'}
-        </button>
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <p>
-          Current theme: <strong>{theme}</strong>
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <MainLayout>
+      <div>
+        <div style={{display:'flex', gap: '14px', marginBottom: 10}}>
+          <button className="btn" onClick={goToFeed}>Feed</button>
+          <button className="btn" onClick={goToDetail}>Video Detail</button>
+        </div>
+        {view === 'feed' && <VideoFeed />}
+        {view === 'detail' && <VideoDetail />}
+      </div>
+    </MainLayout>
   );
 }
 
