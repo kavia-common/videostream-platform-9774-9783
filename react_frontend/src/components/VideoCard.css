@@ -1,0 +1,9 @@
+/* VideoCard: uses mostly assets/design-system.css,
+   but here you may add fine-tuned local overrides if needed */
+
+.video-card {
+  cursor: pointer;
+}
+.video-card:focus {
+  outline: 2px solid var(--color-065fd4);
+}

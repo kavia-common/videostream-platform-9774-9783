@@ -1,0 +1,25 @@
+/* Comments styling */
+.video-comments {
+  margin-top: 24px;
+}
+.comments-list {
+  list-style: none;
+  padding: 0;
+}
+.comments-list li {
+  padding: 12px 0;
+  border-bottom: 1px solid var(--color-f0f0f0);
+  font-size: 15px;
+}
+.comment-author {
+  font-weight: 600;
+  margin-right: 8px;
+}
+.comment-date {
+  color: var(--color-606060);
+  font-size: 12px;
+  margin-left: 12px;
+}
+.comment-content {
+  margin-top: 4px;
+}

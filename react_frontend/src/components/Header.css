@@ -1,0 +1,17 @@
+/* Header custom tweaks (most handled in design-system.css) */
+.header-bar {
+  z-index: 10;
+  box-shadow: 0 0.5px 0 #f0f0f0;
+}
+.header-user-section {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+.user-avatar {
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  background-size: cover;
+  background-position: center;
+}

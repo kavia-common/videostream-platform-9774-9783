@@ -1,0 +1,22 @@
+.main-app-container {
+  min-height: 100vh;
+  width: 100vw;
+  background: var(--color-ffffff);
+}
+.layout-content {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  min-height: 0;
+}
+.main-content {
+  flex: 1;
+  min-height: 700px;
+  padding: 24px;
+  background: var(--color-f9f9f9);
+  /* clipped under header */
+}
+@media (max-width: 900px) {
+  .layout-content { flex-direction: column; }
+  .main-content { padding: 12px;}
+}
